@@ -1,0 +1,8 @@
+<div class="item-details-container">
+    <h2>Item Details</h2>
+    <mat-card *ngIf="itemData">Name: {{itemData.name}}</mat-card>
+    <mat-card *ngIf="itemData">
+        <p>Description: {{itemData.description}}</p>
+    </mat-card>
+    <mat-card *ngIf="itemData">Quantity in storage: {{itemData.quantity}}</mat-card>
+</div>

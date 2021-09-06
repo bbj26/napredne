@@ -1,0 +1,16 @@
+<div class="list-container">
+    <div class="container" *ngFor="let item of items" [routerLink]="['./view', item._id]">
+        <div class="image">
+            <img [src]="item.imageUrl" alt="product image" />
+        </div>
+        <div class="product">
+            <h1 class="name">{{item.name}}</h1>
+            <p class="desc">{{item.description}}</p>
+            <div class="buttons">
+                <button class="add">QTY: {{item.quantity}}</button><br>
+                <button [routerLink]="['./edit', item._id]">Edit</button>
+                <button [routerLink]="['./delete', item._id]">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

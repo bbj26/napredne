@@ -1,0 +1,53 @@
+<mat-card>
+    <mat-card-title>Create new account</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="addAccountForm" (submit)="createAccount()">
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name" formControlName="name">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Username</mat-label>
+                    <input matInput placeholder="Username" formControlName="username">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Street</mat-label>
+                    <input matInput placeholder="Street" formControlName="street">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Zipcode</mat-label>
+                    <input matInput placeholder="Zipcode" formControlName="zipcode">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Country</mat-label>
+                    <input matInput placeholder="Country" formControlName="country">
+                </mat-form-field>
+            </p>
+
+            <p>
+                <button mat-raised-button color="primary" [disabled]="!addAccountForm.valid">Create account</button>
+            </p>
+        </form>
+    </mat-card-content>
+
+</mat-card>

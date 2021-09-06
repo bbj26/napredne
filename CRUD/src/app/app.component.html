@@ -1,0 +1,10 @@
+<app-header (sidebarEvent)="toggleSidebar()"></app-header>
+<mat-drawer-container class="sidebar-container">
+  <mat-drawer mode="side" [(opened)]="opened">
+    <app-sidebar></app-sidebar>
+  </mat-drawer>
+  <mat-drawer-content class="content-container">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer>

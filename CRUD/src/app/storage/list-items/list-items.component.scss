@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+$font: 'Lato', sans-serif;
+
+$white: #F5F5F5;
+$light: #E0C9CB;
+$tan: #C3A1A0;
+$pink: #D9AAB7;
+$rose: #BA7E7E;
+$dark: #4E4E4E;
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: $font, sans-serif;
+  text-transform: uppercase;
+}
+
+.container {
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+  width: 300px;
+  height: 180px;
+  background: $white;
+  border-radius: 10px;
+}
+
+.container:hover {
+    scale: 1.05;
+    transition: all .4s ease-in-out;
+    box-shadow: 5px 5px 5px rgba($rose, .5);
+}
+
+p {
+  font-size: 0.6em;
+  color: $rose;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 1em;
+  color: $dark;
+  margin-top: -5px;
+}
+
+h2 {
+  color: $tan;
+  margin-top: -5px;
+}
+
+.image {
+    height: 100%;
+    width: 50%;
+}
+
+img {
+  width: 95%;
+  height: 95%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+.product {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 10%;
+  left: 55%;
+}
+
+.desc {
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 17px;
+  color: $dark;
+  font-size: .7em;
+  line-height: 1.6em;
+  margin-right: 10px;
+  text-align: justify;
+  overflow: hidden;
+}
+
+button {
+  background: darken($light, 10%);
+  padding: 4px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: 1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    background: $rose;
+    transition: all .4s ease-in-out;
+  }
+}
+
+.name {
+    max-width: 130px;
+    max-height: 33px;
+    overflow: hidden;
+}
+
+.desc {
+    max-width: 115px;
+    max-height: 33px;
+    overflow: hidden;
+}

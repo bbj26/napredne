@@ -1,0 +1,9 @@
+<div class="account-details-container">
+    <h2>Account Details</h2>
+    <mat-card *ngIf="accountDetails">Name: {{accountDetails.name}}</mat-card>
+    <mat-card *ngIf="accountDetails">Username: {{accountDetails.username}}</mat-card>
+    <mat-card *ngIf="accountDetails">Email: {{accountDetails.email}}</mat-card>
+    <mat-card *ngIf="accountDetails">Street: {{accountDetails.street}} </mat-card>
+    <mat-card *ngIf="accountDetails">Zipcode: {{accountDetails.zipcode}}</mat-card>
+    <mat-card *ngIf="accountDetails">Country: {{accountDetails.country}}</mat-card>
+</div>

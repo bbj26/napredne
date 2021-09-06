@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-card-title>Storage temperature</mat-card-title>
+    <mat-card>{{temp.temp}} °C</mat-card>
+</div>
+
+<div class="container">
+    <mat-card-title>Storage humidity</mat-card-title>
+    <mat-card>{{humidity.hum}} %</mat-card>
+</div>
+
+<div class="container">
+    <mat-card-title>Storage fan status</mat-card-title>
+    <mat-card>{{fanStatus.fanStatus}}</mat-card>
+</div>
+
+<div class="container">
+    <form [formGroup]="setGoalTempForm" (submit)="setGoalTemp()">
+        <p>
+            <mat-card-title class="form-title">Set goal temperature</mat-card-title>
+            <mat-form-field appearance="outline">
+                <mat-label>Goal Temperature</mat-label>
+                <input required type="number" matInput formControlName="temp">
+            </mat-form-field>
+        </p>
+
+        <p>
+            <button [disabled]="!setGoalTempForm.valid">Set</button>
+        </p>
+    </form>
+</div>

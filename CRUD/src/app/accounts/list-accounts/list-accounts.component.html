@@ -1,0 +1,11 @@
+<div class="list-container">
+    <h2 *ngIf="accountsList">List of all {{accountsList.length}} accounts in the mongoDB:</h2>
+
+    <mat-list role="list" *ngIf="accountsList">
+       <mat-list-item role="listitem" *ngFor="let account of accountsList">
+            <span class="user-name">{{account.name}}</span> | <a class="action-link" [routerLink]="['./view', account._id]"> View </a> | <a class="action-link" [routerLink]="['./edit', account._id]"> Edit </a> |  <a class="action-link" [routerLink]="['./delete', account._id]"> Delete </a>
+        </mat-list-item>
+    
+      </mat-list>
+      
+</div>

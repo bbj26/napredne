@@ -1,0 +1,12 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="toggleSidebar()">
+    <mat-icon>menu</mat-icon>
+  </button>
+   <a mat-raised-button color="warn" class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+   <span class="example-spacer"></span>
+   <span>NWT</span>
+   <span class="example-spacer"></span>
+   <a *ngIf="!loggedIn()" class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+   <a *ngIf="!loggedIn()" class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+   <a *ngIf="loggedIn()" class="nav-link" style="cursor: pointer" (click)="logoutUser()">Logout</a>
+ </mat-toolbar>
